@@ -1,0 +1,25 @@
+<%= form_with model: @flat do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :address %><br>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :stars %><br>
+    <%= form.number_field :stars %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
