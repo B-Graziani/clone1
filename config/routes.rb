@@ -9,4 +9,5 @@ resources :flats, only: [:index, :show, :edit, :update, :new, :create, :destroy]
   end
   resources :reviews, only: [:new, :create]
 end
+resources :reviews, only: [:destroy]
 end

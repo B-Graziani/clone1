@@ -10,4 +10,15 @@
 <%= link_to "DELETE", flat_path(@flat), method: :delete, data: { confirm: "are you sure ?"} %>
 <br>
 <h2><%= link_to "LEAVE A REVIEW", new_flat_review_path(@flat) %></h2>
+<ul>
+  <% @flat.reviews.each do |review| %>
+  <li>
+    <%= review.content %>
+    <%= link_to "DELETE", review, method: :delete, data: { confirm: "are you sure ?"} %>
+  </li>
+  <% end %>
+</ul>
 <%= link_to "RETOUR", flats_path %>
+
+
+

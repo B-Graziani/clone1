@@ -10,6 +10,11 @@ class ReviewsController < ApplicationController
     @review.save
     redirect_to @flat
   end
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to @review.flat
+  end
 
   private
 
