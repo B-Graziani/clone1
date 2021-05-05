@@ -7,6 +7,6 @@ resources :flats, only: [:index, :show, :edit, :update, :new, :create, :destroy]
   member do
     get :email
   end
+  resources :reviews, only: [:new, :create]
 end
-
 end
