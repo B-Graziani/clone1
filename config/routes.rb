@@ -4,6 +4,9 @@ resources :flats, only: [:index, :show, :edit, :update, :new, :create, :destroy]
   collection do
     get :top
   end
+  member do
+    get :email
+  end
 end
 
 end

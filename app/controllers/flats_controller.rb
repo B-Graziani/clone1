@@ -8,6 +8,10 @@ class FlatsController < ApplicationController
   def top
     @flats = Flat.where('stars >= 5')
   end
+  def email
+    @flat = Flat.find(params[:id])
+    @email = @flat.email
+  end
   def edit
     @flat = Flat.find(params[:id])
   end
@@ -39,6 +43,6 @@ class FlatsController < ApplicationController
   private
 
   def flat_params
-    params.require(:flat).permit(:title, :address, :description, :stars)
+    params.require(:flat).permit(:title, :address, :description, :stars, :email)
   end
 end
